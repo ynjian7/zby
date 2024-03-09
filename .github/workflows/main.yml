@@ -1,7 +1,7 @@
 name: JDY
 on:
   schedule:
-    - cron: '0 ,23 * * *'
+    - cron: '0 ,16 * * *'
   push:
     branches:
       - main
