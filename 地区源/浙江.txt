@@ -6,7 +6,7 @@ CCTV5,http://61.130.72.18:8888/tsfile/live/0005_1.m3u8?key=txiptv&playlive=1&aut
 CCTV6,http://61.130.72.18:8888/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV7,http://61.130.72.18:8888/tsfile/live/0007_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV8,http://61.130.72.18:8888/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV9纪录,http://61.130.72.18:8888/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV9,http://61.130.72.18:8888/tsfile/live/0009_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV10,http://61.130.72.18:8888/tsfile/live/0010_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV11,http://61.130.72.18:8888/tsfile/live/0011_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV12,http://61.130.72.18:8888/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
