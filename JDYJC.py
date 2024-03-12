@@ -101,7 +101,6 @@ def channel_key(channel_name):
 # 对频道进行排序
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 results.sort(key=lambda x: channel_key(x[0]))
-now_today = datetime.date.today()
 
 result_counter = 10  # 每个频道需要的个数
 
@@ -340,7 +339,6 @@ with open("JDY_list.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    # file.write(f"{now_today}更新,#genre#\n")
 
 with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
     channel_counters = {}
@@ -473,11 +471,11 @@ with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
     # 写入合并后的文件
     with open("JDY_list.txt", "w", encoding="utf-8") as output:
         output.write('\n'.join(file_contents))
-
+     # 写入更新时间日期
         now = datetime.now()
         output.write(f"更新日期,#genre#\n")
         output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
-
+   
     # 合并自定义频道文件内容
     file_contents = []
     file_paths = ["cctv.m3u", "JDY_list.m3u"]  # 替换为实际的文件路径列表
