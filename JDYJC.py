@@ -476,7 +476,7 @@ with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
 
         now = datetime.now()
         output.write(f"更新日期,#genre#\n")
-        output.write(now.strftime("%Y-%m-%d %H:%M:%S"))
+        output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
 
     # 合并自定义频道文件内容
     file_contents = []
