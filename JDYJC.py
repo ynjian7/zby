@@ -471,10 +471,11 @@ with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
     # 写入合并后的文件
     with open("JDY_list.txt", "w", encoding="utf-8") as output:
         output.write('\n'.join(file_contents))
-     # 写入更新时间日期
+    # 写入更新日期时间
         now = datetime.now()
-        output.write(f"更新日期,#genre#\n")
-        output.write(f"{now.strftime("%Y-%m-%d %H:%M:%S")},url\n")
+        output.write(f"更新时间,#genre#\n")
+        output.write(f"{now.strftime("%Y-%m-%d")},url\n")
+        output.write(f"{now.strftime("%H:%M:%S")},url\n")
    
     # 合并自定义频道文件内容
     file_contents = []
