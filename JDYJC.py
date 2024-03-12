@@ -1,7 +1,7 @@
 import os
 import re
 import time
-import datetime
+from datetime import datetime
 import threading
 from queue import Queue
 import requests
@@ -232,8 +232,6 @@ def channel_key(channel_name):
 # 对频道进行排序
 results.sort(key=lambda x: (x[0], -float(x[2].split()[0])))
 # results.sort(key=lambda x: channel_key(x[0]))
-now_today = datetime.date.today()
-
 result_counter = 10  # 每个频道需要的个数
 
 with open("JDY_list.txt", 'w', encoding='utf-8') as file:
@@ -476,8 +474,9 @@ with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
     with open("JDY_list.txt", "w", encoding="utf-8") as output:
         output.write('\n'.join(file_contents))
 
+        now = datetime.now()
         output.write(f"更新日期,#genre#\n")
-        output.write(f"{now_today},url\n")
+        output.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 
     # 合并自定义频道文件内容
     file_contents = []
