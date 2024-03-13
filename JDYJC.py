@@ -294,20 +294,20 @@ with open("JDY_list.txt", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_name},{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    channel_counters = {}
-    file.write('求索纪实,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '求索' in channel_name or '纪实' in channel_name or '地理' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"{channel_name},{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"{channel_name},{channel_url}\n")
-                channel_counters[channel_name] = 1
+    # channel_counters = {}
+    # file.write('求索纪实,#genre#\n')
+    # for result in results:
+    #     channel_name, channel_url, speed = result
+    #     if '求索' in channel_name or '纪实' in channel_name or '地理' in channel_name:
+    #         if channel_name in channel_counters:
+    #             if channel_counters[channel_name] >= result_counter:
+    #                 continue
+    #             else:
+    #                 file.write(f"{channel_name},{channel_url}\n")
+    #                 channel_counters[channel_name] += 1
+    #         else:
+    #             file.write(f"{channel_name},{channel_url}\n")
+    #             channel_counters[channel_name] = 1
 
     channel_counters = {}
     file.write('影视综合,#genre#\n')
@@ -375,22 +375,22 @@ with open("JDY_list.m3u", 'w', encoding='utf-8') as file:
                 file.write(f"{channel_url}\n")
                 channel_counters[channel_name] = 1
 
-    channel_counters = {}
-    # file.write('求索纪实,#genre#\n')
-    for result in results:
-        channel_name, channel_url, speed = result
-        if '求索' in channel_name or '纪实' in channel_name or '地理' in channel_name:
-            if channel_name in channel_counters:
-                if channel_counters[channel_name] >= result_counter:
-                    continue
-                else:
-                    file.write(f"#EXTINF:-1 group-title=\"求索纪实\",{channel_name}\n")
-                    file.write(f"{channel_url}\n")
-                    channel_counters[channel_name] += 1
-            else:
-                file.write(f"#EXTINF:-1 group-title=\"求索纪实\",{channel_name}\n")
-                file.write(f"{channel_url}\n")
-                channel_counters[channel_name] = 1
+    # channel_counters = {}
+    # # file.write('求索纪实,#genre#\n')
+    # for result in results:
+    #     channel_name, channel_url, speed = result
+    #     if '求索' in channel_name or '纪实' in channel_name or '地理' in channel_name:
+    #         if channel_name in channel_counters:
+    #             if channel_counters[channel_name] >= result_counter:
+    #                 continue
+    #             else:
+    #                 file.write(f"#EXTINF:-1 group-title=\"求索纪实\",{channel_name}\n")
+    #                 file.write(f"{channel_url}\n")
+    #                 channel_counters[channel_name] += 1
+    #         else:
+    #             file.write(f"#EXTINF:-1 group-title=\"求索纪实\",{channel_name}\n")
+    #             file.write(f"{channel_url}\n")
+    #             channel_counters[channel_name] = 1
 
     channel_counters = {}
     # file.write('地方频道,#genre#\n')
